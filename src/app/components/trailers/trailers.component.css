@@ -1,0 +1,59 @@
+.card-image {
+  position: relative;
+}
+
+.card{
+  min-width: 350px;
+}
+
+img {
+  opacity: 1; 
+  transition: transform .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card-image:hover img {
+  opacity: 0.6;
+}
+
+.card-image:hover .middle {
+  opacity: 1;
+}
+
+
+
+.card{
+  margin: 25px 0;
+}
+
+h5{
+  font-size: 1.45rem;
+  font-weight: bold;
+}
+
+.card{
+  background: #4e4e4e;
+  color: white;
+  box-shadow: inset 0 0 20px #131313, 0 0 10px #000000;
+}
+
+.card-image{
+  overflow: hidden;
+
+}
+
+img:hover{
+  transform: scale(1.1);
+  color: #4e4e4e;
+}

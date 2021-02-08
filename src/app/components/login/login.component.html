@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5 mt-5" id="form">
+            <form class="card text-center p-5" action="/administrador" style="box-shadow: 20px 20px 10px #000000;">
+              <h3 class="mb-4">Iniciar sesión</h3>
+        
+              <!-- Name -->
+              <input type="text" id="adminUser" class="form-control mb-4" placeholder="Usuario" value="">
+              <!-- Email -->
+              <input type="password" id="adminPass" class="form-control mb-4" placeholder="Contrasena" value="">
+              <!-- Sign in button -->
+              <button (click)="init()" class="btn btn-info btn-block" id="submit" type="submit">Sign in</button>
+              
+            </form>
+          </div>
+    </div>
+</div>
