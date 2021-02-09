@@ -7,22 +7,22 @@
                     <form>
                         <div class="form-group">
                             <label for="fname">Nombre</label>
-                            <input [(ngModel)]="info.nombre" type="text" id="fname" name="firstname" class="form-control" placeholder="Tu nombre..">
+                            <input type="text" id="fname" name="firstname" class="form-control" placeholder="Tu nombre..">
                         </div>
                         <div class="form-group">
                             <label for="tel">Telefono</label>
-                            <input [(ngModel)]="info.tel" type="tel" id="tel" name="tel" class="form-control" placeholder="Tu telefono..">
+                            <input type="tel" id="tel" name="tel" class="form-control" placeholder="Tu telefono..">
                         </div>
                         <div class="form-group">
                             <label for="email">Correo electronico</label>
-                            <input [(ngModel)]="info.email" type="email" id="email" name="email" class="form-control" placeholder="Tu Correo electronico..">
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Tu Correo electronico..">
                         </div>
                         <div class="form-group">
                             <label for="subject">Comentario</label>
-                            <textarea [(ngModel)]="info.coment" id="subject" name="subject" class="form-control" placeholder="Escribe algo.." style="height:76px"></textarea>
+                            <textarea id="subject" name="subject" class="form-control" placeholder="Escribe algo.." style="height:76px"></textarea>
                         </div>
                 
-                        <input (click)="sendMessage()" class="btn btn-block btn-primary" type="submit" value="Enviar">
+                        <input class="btn btn-block btn-primary" type="submit" value="Enviar">
                     </form>
                 </div>
             </div>

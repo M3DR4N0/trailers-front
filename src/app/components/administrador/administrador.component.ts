@@ -11,10 +11,10 @@ import { TrailersService } from '../../services/trailers.service';
 })
 export class AdministradorComponent extends AppComponent implements OnInit {
   yearsArr = [];
-  
+
   ngOnInit(): void {
     this.spinner();
-    for(let i = 1980; i <= 2025; i++){
+    for(let i = 2025; i >= 1980; i--){
       this.yearsArr.push(i);
     }
   }

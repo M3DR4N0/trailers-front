@@ -8,14 +8,11 @@
 </ngx-spinner>
 
 <div class="container" id="hide" ng-app="paginationApp" ng-controller="paginationController">
-    <div class="">
+    <div>
         <div class="row text-center justify-content-center">
-            <div class="col-md-7 mt-4">
-                <input class="form-control mr-sm-0 text-light" name="SearchPost" [(ngModel)]="SearchPost" style="background: #00000094; border: none;" type="search" id="searchBar" placeholder="Search" aria-label="Search">
-            </div>
-            <div>
-                <div *ngFor="let trailer of trailersArr | search:SearchPost | paginate: { itemsPerPage: 6, currentPage: p } ; index as i" class="col-md-4" style="display: inline-block !important;">
-                    <div class="card">
+            
+                <div *ngFor="let trailer of trailersArr | paginate: { itemsPerPage: 6, currentPage: p } ; index as i" class="col-md-4" style="display: inline-block !important;">
+                    <div class="card" style="max-height: 80%;">
                         <div class="card-image">
                             <img class="card-img-top" src="{{ trailer.imgUrl }}" height="200">
                             <button (click)="onClick(trailer.url)" class="btn btn-light rounded-circle middle btn-lg pl-3">
@@ -24,12 +21,10 @@
                         </div> 
                         <div id="klk" class="card-body">
                             <h5 class="card-title mb-4">{{ trailer.title }}</h5>
-                            <span class="badge badge-danger mr-2" style="font-size: large;">{{trailer.genero}}</span>
-                            <span class="badge badge-info" style="font-size: large;">{{ trailer.year }}</span>
+                            <span class="badge badge-primary" style="font-size: large;">{{ trailer.year }}</span>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
     

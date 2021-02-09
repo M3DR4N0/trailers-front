@@ -17,10 +17,6 @@ export class TrailersComponent extends AppComponent implements OnInit  {
 
   ngOnInit(){ 
     this.spinner();
-    document.getElementById('searchBar').style.display = 'none';
-    if(this.Press){
-      this.SearchPost = null;
-    }
   } 
 
   onClick(src: string){

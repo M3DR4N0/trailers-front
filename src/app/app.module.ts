@@ -11,8 +11,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { SearchPipe } from './pipes/search.pipe';
-import { LoginComponent } from './components/login/login.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ContactoComponent } from './components/contacto/contacto.component';
 
@@ -23,8 +21,6 @@ import { ContactoComponent } from './components/contacto/contacto.component';
     TrailersComponent,
     AdministradorComponent,
     HomeComponent,
-    SearchPipe,
-    LoginComponent,
     ContactoComponent
   ],
   imports: [
