@@ -1,19 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TrailersComponent } from './components/trailers/trailers.component';
-import { AdministradorComponent } from './components/administrador/administrador.component';
-import { HomeComponent } from './components/home/home.component';
-import { ContactoComponent } from './components/contacto/contacto.component';
 
 const routes: Routes = [
-  {path: 'trailers', component: TrailersComponent},
-  {path: 'administrador', component: AdministradorComponent},
-  {path: 'home', component: HomeComponent},
-  {path: '', component: HomeComponent},
-  {path: 'administrador/:id', component: AdministradorComponent},
-  {path: 'trailers/:title', component: TrailersComponent},
-  {path: 'contacto', component: ContactoComponent}
-
+  {path: '', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)},
+  {path: 'home', redirectTo: '', pathMatch: 'full'},
 ];
 
 @NgModule({

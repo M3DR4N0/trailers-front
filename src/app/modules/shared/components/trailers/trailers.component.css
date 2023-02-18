@@ -21,6 +21,7 @@ img {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  pointer-events: none;
 }
 
 .card-image:hover img {
@@ -30,8 +31,6 @@ img {
 .card-image:hover .middle {
   opacity: 1;
 }
-
-
 
 .card{
   margin: 25px 0;

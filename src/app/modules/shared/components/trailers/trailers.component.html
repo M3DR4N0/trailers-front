@@ -1,0 +1,20 @@
+<div class="container" style="padding-top: 7rem">
+    <div class="row text-center justify-content-center">
+        <div *ngFor="let trailer of trailers" class="col-md-4" style="display: inline-block !important">
+            <div class="card" style="max-height: 80%">
+                <div class="card-image">
+                    <img class="card-img-top" src="{{ trailer.imgUrl }}" height="200" />
+                    <button class="btn btn-light rounded-circle middle btn-lg pl-3">
+                        <i class="fa fa-play text ml-1 mt-2 mb-2"></i>
+                    </button>
+                </div>
+                <div id="klk" class="card-body">
+                    <h5 class="card-title mb-4">{{ trailer.title }}</h5>
+                    <span class="badge badge-primary" style="font-size: large">{{
+                        trailer.year
+                        }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
