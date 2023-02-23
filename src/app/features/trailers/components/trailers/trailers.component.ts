@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
+import { TrailersService } from 'src/app/core/services/trailers.service';
+import { Trailer } from 'src/app/shared/models/trailer';
 import Swal from 'sweetalert2';
-import { TrailersService } from 'src/app/modules/core/services/trailers.service';
-import { Trailer } from 'src/app/modules/shared/models/trailer';
 
 @Component({
   selector: 'app-trailers',
@@ -10,15 +10,22 @@ import { Trailer } from 'src/app/modules/shared/models/trailer';
 })
 
 export class TrailersComponent implements OnInit  {
+  @Input() search: string;
+
   trailers: Trailer[];
   // https://www.youtube.com/embed/
   constructor(public service: TrailersService) {}
 
   ngOnInit(){
-    this.displayTrailers();
+    this.displayTrailers(this.search);
   } 
 
-  displayTrailers(){
+  displayTrailers(trailerSearch?: string){
+    if (trailerSearch) {
+      this.service.search(trailerSearch).subscribe(data => this.trailers = data);    
+      return;
+    }
+
     this.service.get().subscribe(data => this.trailers = data);    
   }
 }

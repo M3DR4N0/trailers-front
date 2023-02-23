@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { TrailersService } from './modules/core/services/trailers.service';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,16 @@ import { TrailersService } from './modules/core/services/trailers.service';
 })
 
 export class AppComponent {
-  constructor(public trailersService: TrailersService){}
+  constructor(private router: Router){
+
+  }
+
+  onSubmit(input: HTMLInputElement){
+    
+    this.router.navigate(
+      ['trailers/search'],
+      { queryParams: { s: input.value } }
+    );
+  }
 }
 

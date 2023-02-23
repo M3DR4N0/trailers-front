@@ -22,20 +22,16 @@ input[type="search"]:focus{
   border: none;
 }
 
+input[type="search"]{
+  border: none;
+  color: #ccd5dd;
+  background-color: #6C757D;
+}
+
 @media (min-width: 992px){
   .bordered{
     float: none;
     border: none;
-  }
-
-  input[type="search"]{
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-    color: white;
   }
 
   .btn-primary{

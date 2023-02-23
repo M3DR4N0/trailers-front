@@ -10,20 +10,13 @@
       <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" routerLink="/trailers">Trailers</a>
-
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" routerLink="/contacto">Contacto</a>
+      <a class="nav-link" routerLink="/trailers">Trailers</a>
     </li>
   </ul>
-  <div class="bordered my-lg-0 w-100">
-    <div class="form-inline my-2">
-      <a routerLink="/administrador" class="btn bg-dark btn-outline-dark btn-large text-white ml-auto disabled" style="font-size: 25px;">Administrar</a>
-    </div>
-  </div>
-  
-  
+  <form class="ml-2 w-50 d-flex" (ngSubmit)="onSubmit(search)" #form="ngForm">
+    <input type="search" name="search" class="form-control" #search>
+    <button type="submit" class="btn btn-dark"><i class="fa fa-search"></i></button>
+  </form>
  </div>
 </nav>
 

@@ -3,8 +3,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Trailer } from '../../shared/models/trailer';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
-import { HomeModule } from '../../home/home.module';
-import { SharedModule } from '../../shared/shared.module';
 
 @Injectable()
 export class TrailersService {
@@ -17,6 +15,10 @@ export class TrailersService {
 
   get(): Observable<Trailer[]> {
     return this.httpClient.get<Trailer[]>(this.ENDPOINT + '/trailer');
+  }
+
+  search(title: string): Observable<Trailer[]>{
+    return this.httpClient.get<Trailer[]>(this.ENDPOINT + `/trailer?title=${title}`);
   }
 
   getById(id){
