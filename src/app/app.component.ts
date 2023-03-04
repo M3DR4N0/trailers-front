@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,14 +8,12 @@ import { Router } from '@angular/router';
 })
 
 export class AppComponent {
-  constructor(private router: Router){
-
-  }
+  constructor(private router: Router){}
 
   onSubmit(input: HTMLInputElement){
     
     this.router.navigate(
-      ['trailers/search'],
+      ['/trailers'],
       { queryParams: { s: input.value } }
     );
   }

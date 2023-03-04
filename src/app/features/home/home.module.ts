@@ -2,9 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './pages/home/home.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { TrailersComponent } from '../trailers/components/trailers/trailers.component';
+import { HomeComponent } from './home.component';
 
 @NgModule({
   declarations: [
